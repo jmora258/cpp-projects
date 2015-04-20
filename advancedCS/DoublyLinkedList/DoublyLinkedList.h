@@ -32,7 +32,7 @@ class DoublyLinkedList
 
 		void addItem(ItemType v); 
 		void addToFront(ItemType v);
-		void addTORear(ItemType v); 
+		void addToRear(ItemType v); 
 		
 		bool findItem(ItemType v); 
 		void deleteItem(ItemTyep v); 
