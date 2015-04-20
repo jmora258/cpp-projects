@@ -28,14 +28,15 @@ class DoublyLinkedList
 {
 	public: 
 		DoublyLinkedList(); 
+		DoublyLinkedList(ItemType v); // create & add 1 item
 		~DoublyLinkedList(); 
 
-		void addItem(ItemType v); 
-		void addToFront(ItemType v);
-		void addToRear(ItemType v); 
+		bool addItem(ItemType v); 
+		bool addToFront(ItemType v);
+		bool addToRear(ItemType v); 
 		
 		bool findItem(ItemType v); 
-		void deleteItem(ItemTyep v); 
+		bool deleteItem(ItemTyep v); 
 		void printItems(); // prints all of the items in the list 
 
 	private: 
