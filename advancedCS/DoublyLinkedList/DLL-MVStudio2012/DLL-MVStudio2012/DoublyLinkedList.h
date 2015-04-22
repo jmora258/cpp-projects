@@ -35,12 +35,13 @@ class DoublyLinkedList
 		bool addToRear(ItemType v); 
 		
 		bool findItem(ItemType v); 
-		bool deleteItem(ItemTyep v); 
+		bool deleteItem(ItemType v); 
 		void printItems(); // prints all of the items in the list 
 
 	private: 
 		Node* head; 
 		Node* tail; 
+		int m_size; // list's size 
 };
 
  #endif 

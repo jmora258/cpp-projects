@@ -20,21 +20,21 @@
  	cout << "====== DoubliyLinkedList Tester Program ======" << endl; 
  	cout << endl; 
 
- 	cout << "Test the Constructor, if succesful, then one should "
- 		 << "be able to add an item." << endl; 
+ 	cout << "Test the Constructor: if succesful, then user should "
+ 		 << "be able to add items to the list." << endl; 
 
- 	DoublyLinkedList myList = new DoublyLinkedList(); 
+ 	DoublyLinkedList myList; 
 
  	item = 5; 
- 	cout << "Test addItem(ItemType v) method: add " << item 
+ 	cout << endl << "Test addItem(ItemType v) method: add " << item 
  		 << " to the list!" << endl; 
  	if(myList.addItem(item))
- 		cout << item << " was succesfully added to the list!" << endl; 
+ 		cout << item << " was succesfully added!" << endl; 
  	else 
  		cout << "Failed to add " << item << " to the list." << endl ;
 
  	item = 7; 
- 	cout << "Test addToFront(ItemType v) method: add " << item 
+ 	cout << endl << "Test addToFront(ItemType v) method: add " << item 
  		 << " to the front of the list!" << endl; 
  	if(myList.addItem(item))
  		cout << item << " was succesfully added to the front " 
