@@ -36,10 +36,37 @@
  	item = 7; 
  	cout << endl << "Test addToFront(ItemType v) method: add " << item 
  		 << " to the front of the list!" << endl; 
- 	if(myList.addItem(item))
+ 	if(myList.addToFront(item))
  		cout << item << " was succesfully added to the front " 
  			 << "of the list!" << endl; 
  	else 
  		cout << "Failed to add " << item << " to the front." << endl ;
+
+	item = 10; 
+	cout << endl << "Test addToRear(ItemType v) method: add " << item 
+ 		 << " to the back of the list!" << endl; 
+ 	if(myList.addToRear(item))
+ 		cout << item << " was succesfully added to the back " 
+ 			 << "of the list!" << endl; 
+ 	else 
+ 		cout << "Failed to add " << item << " to the rear." << endl ;
+
+	item = 3; 
+	cout << endl << "Test findItemLS() method to find " << item 
+		<< " in the list." << endl; 
+	if(myList.findItemLS(3)) // find 3; 
+		cout << "Found " << item << " in the list!!" << endl; 
+	else 
+		cout << "Did not find " << item << " in the list!!" << endl; 
+
+	item = 10; 
+	cout << endl << "Test adding an already existing value in the list " 
+		<< "by using addItem(v) method. If successful, it will be noted:" 
+		<< endl; 
+	if(myList.addItem(item))
+		cout << "Added " << item << " to the list!" << endl; 
+	else 
+		cout << item << " is already in the list! It was NOT added." << endl; 
+
 
  }

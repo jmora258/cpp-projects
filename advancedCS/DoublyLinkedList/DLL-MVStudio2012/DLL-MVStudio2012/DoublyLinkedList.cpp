@@ -64,7 +64,7 @@ bool DoublyLinkedList::addToFront(ItemType v)
 	}
 
 	isPresent->count++; // v is already in the list, update its count variable
-	return true; 
+	return false; // did not create a new node for v
 }
 
 bool DoublyLinkedList::addToRear(ItemType v) 
@@ -100,7 +100,7 @@ bool DoublyLinkedList::addToRear(ItemType v)
 	}
 
 	isPresent->count++; // v is already in the list, update its count variable
-	return true; 
+	return false;  // did not create a new Node for v
 }
 
 bool DoublyLinkedList::findItemLS(ItemType v)
@@ -131,6 +131,7 @@ Node* DoublyLinkedList::getItemLS(ItemType v)
 	traversal = nullptr; // did not find item 
 	return traversal; 
 }
+
 
 
 DoublyLinkedList::~DoublyLinkedList()
