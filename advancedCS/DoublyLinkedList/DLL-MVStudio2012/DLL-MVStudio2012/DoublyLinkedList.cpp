@@ -5,6 +5,8 @@
 */ 
 
 #include "DoublyLinkedList.h"
+#include <iostream> 
+using namespace std; 
 
 DoublyLinkedList::DoublyLinkedList()
 {
@@ -172,6 +174,19 @@ Node* DoublyLinkedList::getItemLS(ItemType v)
 	}
 	traversal = nullptr; // did not find item 
 	return traversal; 
+}
+
+void DoublyLinkedList::printItems()
+{
+	Node* traversal = head; 
+	int position = 0; 
+	while (traversal != nullptr)
+	{
+		position++; 
+		cout << "Value at position " << position << " is " 
+			<< traversal->value << endl; 
+		traversal = traversal->next; 
+	}
 }
 
 DoublyLinkedList::~DoublyLinkedList()

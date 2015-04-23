@@ -71,10 +71,15 @@
 	item = 10; 
 	cout << endl << "Test deleteItem(ItemType v) method: delete " << item 
  		 << " from the list!" << endl; 
+	cout << "Print items before deleting item. " << endl; 
+	myList.printItems(); 
  	if(myList.deleteItem(item))
- 		cout << item << " was succesfully deleted from the list!" << endl; 
+ 		cout << endl << item << " was succesfully deleted from the list!" << endl; 
  	else 
- 		cout << "Failed to delete " << item << " from the list." << endl ;
+ 		cout << endl << "Failed to delete " << item << " from the list." << endl ;
+	cout << endl << "Print list after deleting " << item << endl; 
+	myList.printItems(); 
+	cout << endl; 
 
 	item = 10; 
 	cout << endl << "Double-check that deleteItem(v) works by using the "
@@ -84,5 +89,13 @@
 		cout << "Found " << item << " in the list!! " << endl; 
 	else 
 		cout << "Did not find " << item << " in the list!!" << endl; 
+
+	cout << endl; 
+	cout << "TEST printItems() method. If successful, the values in each " 
+		<< endl << "of the nodes should be printed with a new line character"
+		<< endl << "followed after." << endl; 
+	myList.printItems(); 
+
+	cout << "END of TEST!! " << endl; 
 
  }
