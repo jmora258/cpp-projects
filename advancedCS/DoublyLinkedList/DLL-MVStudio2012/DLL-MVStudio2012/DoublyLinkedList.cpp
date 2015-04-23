@@ -103,6 +103,48 @@ bool DoublyLinkedList::addToRear(ItemType v)
 	return false;  // did not create a new Node for v
 }
 
+bool DoublyLinkedList::deleteItem(ItemType v)
+{
+	// 
+	Node* itemToDelete = getItemLS(v); // retrieve ptr to item to be deleted
+	
+	if(m_size == 1)// only 1 item in the list 
+	{
+		delete itemToDelete; 
+		head = tail = nullptr; 
+	}
+	else if(itemToDelete != nullptr) // item is in list, delete it: 
+	{
+		// Item is the first item in the list: 
+		if(itemToDelete == head)
+		{
+			head = itemToDelete->next; 
+			head->prev = nullptr; 
+			delete itemToDelete; 
+			return true; 
+		}
+		// Item is the last item in the list: 
+		if(itemToDelete == tail)
+		{
+			tail = itemToDelete->prev; 
+			tail->next = nullptr; 
+			delete itemToDelete; 
+			return true; 
+		}
+
+		// Item is somewhere in the middle: 
+		//	1) make the preceding item's next ptr point to the succeeding item
+		//	2) make the succeeding item's prev ptr point to the preceding item
+		itemToDelete->prev->next = itemToDelete->next; 
+		itemToDelete->next->prev = itemToDelete->prev; 
+		delete itemToDelete; 
+
+		return true; // item was deleted 
+	}
+
+	return false; // nothing was deleted
+}
+
 bool DoublyLinkedList::findItemLS(ItemType v)
 {
 	Node* traversal = head; 
@@ -131,8 +173,6 @@ Node* DoublyLinkedList::getItemLS(ItemType v)
 	traversal = nullptr; // did not find item 
 	return traversal; 
 }
-
-
 
 DoublyLinkedList::~DoublyLinkedList()
 {

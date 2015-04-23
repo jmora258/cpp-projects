@@ -54,7 +54,7 @@
 	item = 3; 
 	cout << endl << "Test findItemLS() method to find " << item 
 		<< " in the list." << endl; 
-	if(myList.findItemLS(3)) // find 3; 
+	if(myList.findItemLS(item)) // find 3, or whatever numer on line 54; 
 		cout << "Found " << item << " in the list!!" << endl; 
 	else 
 		cout << "Did not find " << item << " in the list!!" << endl; 
@@ -68,5 +68,21 @@
 	else 
 		cout << item << " is already in the list! It was NOT added." << endl; 
 
+	item = 10; 
+	cout << endl << "Test deleteItem(ItemType v) method: delete " << item 
+ 		 << " from the list!" << endl; 
+ 	if(myList.deleteItem(item))
+ 		cout << item << " was succesfully deleted from the list!" << endl; 
+ 	else 
+ 		cout << "Failed to delete " << item << " from the list." << endl ;
+
+	item = 10; 
+	cout << endl << "Double-check that deleteItem(v) works by using the "
+		<< endl << "findItemLS() method. Let's find " << item << " in the list." << endl; 
+	cout << "If successful, it should say that it did not find the item:" << endl; 
+	if(myList.findItemLS(item)) // find 10, but 10 was removed on line 74
+		cout << "Found " << item << " in the list!! " << endl; 
+	else 
+		cout << "Did not find " << item << " in the list!!" << endl; 
 
  }

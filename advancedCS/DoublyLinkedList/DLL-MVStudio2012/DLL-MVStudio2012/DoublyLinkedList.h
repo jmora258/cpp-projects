@@ -35,14 +35,14 @@ class DoublyLinkedList
 		bool addToRear(ItemType v); 
 		
 		bool findItemLS(ItemType v); // linear search Big-O(N) 
-		Node* getItemLS(ItemType v);  // returns ptr to node whose value == v
-		bool deleteItem(ItemType v); 
+		bool deleteItem(ItemType v); // deletes the item completely from the list
 		void printItems(); // prints all of the items in the list 
 
 	private: 
 		Node* head; 
 		Node* tail; 
 		int m_size; // list's size 
+		Node* getItemLS(ItemType v);  // returns ptr to node whose value == v
 };
 
  #endif 
