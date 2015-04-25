@@ -147,7 +147,7 @@ bool DoublyLinkedList::deleteItem(ItemType v)
 	return false; // nothing was deleted
 }
 
-bool DoublyLinkedList::findItemLS(ItemType v)
+bool DoublyLinkedList::findItemLS(ItemType v) const
 {
 	Node* traversal = head; 
 
@@ -176,7 +176,7 @@ Node* DoublyLinkedList::getItemLS(ItemType v)
 	return traversal; 
 }
 
-void DoublyLinkedList::printItems()
+void DoublyLinkedList::printItems() const
 {
 	Node* traversal = head; 
 	int position = 0; 
@@ -187,6 +187,21 @@ void DoublyLinkedList::printItems()
 			<< traversal->value << endl; 
 		traversal = traversal->next; 
 	}
+}
+
+int DoublyLinkedList::getSize() const
+{
+	return m_size; 
+}
+
+int DoublyLinkedList::getItemCount(ItemType v)
+{
+	Node* foundItem = getItemLS(v);
+
+	if(foundItem != nullptr)
+		return 5; // (foundItem->count); 
+
+	return -1; // Item is not in the list 
 }
 
 DoublyLinkedList::~DoublyLinkedList()

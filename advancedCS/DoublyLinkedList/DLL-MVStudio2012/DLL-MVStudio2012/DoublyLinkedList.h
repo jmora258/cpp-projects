@@ -34,9 +34,13 @@ class DoublyLinkedList
 		bool addToFront(ItemType v);
 		bool addToRear(ItemType v); 
 		
-		bool findItemLS(ItemType v); // linear search Big-O(N) 
+		bool findItemLS(ItemType v) const; // linear search Big-O(N) 
 		bool deleteItem(ItemType v); // deletes the item completely from the list
-		void printItems(); // prints all of the items in the list 
+		void printItems() const; // prints all of the items in the list 
+		
+		// Accessor Methods: 
+		int getSize() const;
+		int getItemCount(ItemType v);  // returns -1 if item is not in the list
 
 	private: 
 		Node* head; 
