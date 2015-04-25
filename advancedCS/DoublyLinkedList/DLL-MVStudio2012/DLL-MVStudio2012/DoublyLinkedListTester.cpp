@@ -96,6 +96,11 @@
 		<< endl << "followed after." << endl; 
 	myList.printItems(); 
 
+	cout << endl << "Test whether if it's possible to access the variable that "
+		<< "keeps count of the number of times each item appears on the list." << endl; 
+
+	
+
 	cout << "END of TEST!! " << endl; 
 
  }
